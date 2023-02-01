@@ -8,6 +8,19 @@ class HomePage extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('HomePage')), body: const SafeArea(child: Text('HomeController')));
+    return Scaffold(
+      appBar: AppBar(title: const Text('HomePage')),
+      body: SafeArea(child: GetBuilder<HomeController>(
+        builder: (_) {
+          return SizedBox(
+            child: Center(
+                child: ElevatedButton(
+              onPressed: _.goToCounter,
+              child: const Text('developing inside'),
+            )),
+          );
+        },
+      )),
+    );
   }
 }

@@ -1,10 +1,32 @@
 import 'package:get/get.dart';
+import 'package:getx_clean_architecture/app/routes/app_pages.dart';
 
 class HomeController extends GetxController {
-// final MyRepository repository;
-// HomeController(this.repository);
+  //
 
-//   final _obj = ''.obs;
-//   set obj(value) => this._obj.value = value;
-//   get obj => this._obj.value;
+  //
+  @override
+  void onInit() {
+    print("App starting");
+    super.onInit();
+  }
+
+  //view loaded
+  @override
+  void onReady() {
+    print("App engaged");
+    super.onReady();
+  }
+
+  //view closed
+  @override
+  void onClose() {
+    print("app closed");
+    super.onClose();
+  }
+
+//
+  goToCounter() {
+    Get.toNamed(Routes.COUNTER);
+  }
 }

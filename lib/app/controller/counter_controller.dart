@@ -1,10 +1,28 @@
 import 'package:get/get.dart';
 
 class CounterController extends GetxController {
-  // final MyRepository repository;
-  // CounterController(this.repository);
+  final counter = 0.obs;
+  @override
+  void onInit() {
+    print("App starting");
+    super.onInit();
+  }
 
-  // final _obj = ''.obs;
-  // set obj(value) => this._obj.value = value;
-  // get obj => this._obj.value;
+  //view loaded
+  @override
+  void onReady() {
+    print("App engaged");
+    super.onReady();
+  }
+
+  //view closed
+  @override
+  void onClose() {
+    print("app closed");
+    super.onClose();
+  }
+
+  incrementCounter() {
+    counter.value++;
+  }
 }

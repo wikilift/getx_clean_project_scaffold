@@ -1,3 +1,3 @@
 import 'package:flutter/material.dart';
 
-final ThemeData appThemeData = ThemeData.dark();
+final ThemeData appThemeDataDark = ThemeData.dark();
